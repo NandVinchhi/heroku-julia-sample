@@ -1,6 +1,6 @@
 using Mux
 
-@app test = (
+@app test = Dash(
   Mux.defaults,
   page(respond(dcc_graph(
             id = "my-graph",
