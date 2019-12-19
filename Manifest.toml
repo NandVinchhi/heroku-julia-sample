@@ -1,5 +1,6 @@
 # This file is machine-generated - editing it directly is not advised
 
+
 [[AssetRegistry]]
 deps = ["Distributed", "JSON", "Pidfile", "SHA", "Test"]
 git-tree-sha1 = "b25e88db7944f98789130d7b503276bc34bc098e"
@@ -32,6 +33,14 @@ deps = ["InteractiveUtils", "OrderedCollections"]
 git-tree-sha1 = "0809951a1774dc724da22d26e4289bbaab77809a"
 uuid = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
 version = "0.17.0"
+
+[[Dashboards]]
+deps = ["DataStructures", "HTTP", "JSON", "JSON2", "LibGit2", "MacroTools", "PlotlyBase", "Test"]
+git-tree-sha1 = "29b587b38beecb1a9554ed35788645328663fc87"
+repo-rev = "master"
+repo-url = "https://github.com/waralex/Dashboards.jl.git"
+uuid = "9024f26f-ba4d-4e0a-965a-ad5b1da667aa"
+version = "0.1.0"
 
 [[Dates]]
 deps = ["Printf"]
