@@ -2,13 +2,13 @@ using Mux
 using Dashboards
 import HTTP
 
+external_stylesheets = ["https://codepen.io/chriddyp/pen/bWLwgP.css"]
 
-
-@app test = Dash("Plastic Exports") do
+@app test = Dash("Plastic Exports", external_stylesheets = external_stylesheets) do
    
        
-
-        dcc_graph(
+        Mux.defaults,
+        page(dcc_graph(
             id = "my-graph",
 
             figure = (
@@ -33,7 +33,7 @@ import HTTP
                
 
             )
-        )
+        ))
     
 end
 
