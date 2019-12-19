@@ -1,5 +1,11 @@
 # This file is machine-generated - editing it directly is not advised
 
+[[Parsers]]
+deps = ["Dates", "Test"]
+git-tree-sha1 = "0139ba59ce9bc680e2925aec5b7db79065d60556"
+uuid = "69de0a69-1ddd-5017-9359-2bf0b02dc9f0"
+version = "0.3.10"
+
 [[Requires]]
 deps = ["UUIDs"]
 git-tree-sha1 = "999513b7dea8ac17359ed50ae8ea089e4464e35e"
