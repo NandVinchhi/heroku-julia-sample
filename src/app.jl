@@ -5,14 +5,8 @@ import HTTP
 external_stylesheets = ["https://codepen.io/chriddyp/pen/bWLwgP.css"]
 
 @app test = Dash("Plastic Exports", external_stylesheets=external_stylesheets) do
-    html_div() do
-        html_h2("Dashboards.jl interactive graph",
-            style=(
-                textAlign = "center",
-                color = "#8c8c8c"
-            )
-        ),
-
+   
+       
 
         dcc_graph(
             id = "my-graph",
@@ -36,11 +30,11 @@ external_stylesheets = ["https://codepen.io/chriddyp/pen/bWLwgP.css"]
                     margin = (l = 40, r = 0, t = 40, b = 30)
                 ),
 
-                #style = ("height": 300)
+               
 
             )
         )
-    end
+    
 end
 
 fetch(serve(test,parse(Int,ARGS[1])))
