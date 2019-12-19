@@ -3,3 +3,5 @@ Mux = "a975b10e-0019-58db-a62f-e48ff68538c9"
 Dashboards = "9024f26f-ba4d-4e0a-965a-ad5b1da667aa"
 JSON2 = "2535ab7d-5cd8-5a07-80ac-9b1792aadce3"
 PlotlyBase = "a03496cd-edff-5a9b-9e67-9cda94a718b5"
+DocStringExtensions = "ffbed154-4ef7-542d-bbb7-c09d3a79fcae"
+
