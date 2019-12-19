@@ -2,7 +2,7 @@ using Mux
 
 @app test = (
   Mux.defaults,
-  page(dcc_graph(
+  page(respond(dcc_graph(
             id = "my-graph",
 
             figure = (
@@ -27,7 +27,7 @@ using Mux
                 #style = ("height": 300)
 
             )
-        )),
+        ))),
   
   Mux.notfound())
 
