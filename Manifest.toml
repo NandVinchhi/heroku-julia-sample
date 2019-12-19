@@ -97,6 +97,12 @@ git-tree-sha1 = "6cbbbab27d9411946725f5d5c91e8b8fb5f7d5db"
 uuid = "2535ab7d-5cd8-5a07-80ac-9b1792aadce3"
 version = "0.3.1"
 
+[[LaTeXStrings]]
+deps = ["Compat"]
+git-tree-sha1 = "7ab9b8788cfab2bdde22adf9004bda7ad9954b6c"
+uuid = "b964fa9f-0449-5b57-a5c2-d3ea65f4040f"
+version = "1.0.3"
+
 [[Lazy]]
 deps = ["Compat", "MacroTools", "Test"]
 git-tree-sha1 = "aec38c7e7f255a678af22651c74100e3cd39ea20"
