@@ -1,9 +1,10 @@
 import HTTP
 using Dashboards
+using Mux
 
 external_stylesheets = ["https://codepen.io/chriddyp/pen/bWLwgP.css"]
 
-app test = Dash("Plastic Exports", external_stylesheets=external_stylesheets) do
+dashboard = Dash("Plastic Exports", external_stylesheets=external_stylesheets) do
     html_div() do
         html_h2("Dashboards.jl interactive graph",
             style=(
@@ -35,13 +36,14 @@ app test = Dash("Plastic Exports", external_stylesheets=external_stylesheets) do
                     margin = (l = 40, r = 0, t = 40, b = 30)
                 ),
 
-                #style = ("height": 300)
-
             )
         )
     end
 end
 
-handler = make_handler(app, debug = true)
-println("started at localhost:8080")
-HTTP.serve(handler, HTTP.Sockets.localhost, 8080)
+@app test = (
+    dashboard,
+    Mux.notfound()
+)
+
+@sync serve(test, port=parse(Int64, ARGS[1]))
