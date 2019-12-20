@@ -1,8 +1,20 @@
 using Mux
+import HTTP
+using Dashboards
 
-@app test = Dash(
-  Mux.defaults,
-  page(respond(dcc_graph(
+external_stylesheets = ["https://codepen.io/chriddyp/pen/bWLwgP.css"]
+
+app test = Dash("Plastic Exports", external_stylesheets=external_stylesheets) do
+    html_div() do
+        html_h2("Dashboards.jl interactive graph",
+            style=(
+                textAlign = "center",
+                color = "#8c8c8c"
+            )
+        ),
+
+
+        dcc_graph(
             id = "my-graph",
 
             figure = (
@@ -27,8 +39,8 @@ using Mux
                 #style = ("height": 300)
 
             )
-        ))),
-  
-  Mux.notfound())
+        )
+    end
+end
 
-fetch(serve(test,parse(Int,ARGS[1])))
+@sync serve(test, port=parse(Int64, ARGS[1]))
