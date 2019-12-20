@@ -43,4 +43,6 @@ app test = Dash("Plastic Exports", external_stylesheets=external_stylesheets) do
     end
 end
 
-@sync serve(test, port=parse(Int64, ARGS[1]))
+handler = make_handler(app, debug = true)
+println("started at localhost:8080")
+HTTP.serve(handler, HTTP.Sockets.localhost, 8080)
